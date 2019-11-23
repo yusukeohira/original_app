@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('furigana');
             $table->integer('center_id');
-            $table->integer('divison_id');
+            $table->integer('division_id');
             //管理者カラムはどうするか？？//
             $table->tinyinteger('role');
             $table->string('email')->unique();

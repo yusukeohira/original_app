@@ -78,9 +78,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="center_id" class="col-md-4 col-form-label text-md-right">{{ __('部署ID') }}</label>
+                            <label for="division_id" class="col-md-4 col-form-label text-md-right">{{ __('部署ID') }}</label>
                             <div class="col-md-6">
-                                <input id="divison_id" type="interger" class="form-control" name="divison_id">
+                                <input id="division_id" type="interger" class="form-control" name="division_id">
                             </div>
                         </div>
                         <div class="form-group row">
