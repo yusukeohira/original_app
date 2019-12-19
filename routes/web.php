@@ -18,5 +18,26 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//トップページ//
+Route::get('/top','UsersController@add')->middleware('auth');
+//news index 表示
+Route::get('news/index','NewsController@index')->middleware('auth');
+//news edit 表示
+Route::get('news/edit','NewsController@edit')->middleware('auth');
+//ニュース作成画面表示//
+Route::get('news/create', 'NewsController@add')->middleware('auth');
+Route::post('news/create', 'NewsController@create')->middleware('auth');
 
-Route::get('/index','UsersController@add');
+//threads作成画面表示//
+Route::get('threads/create','ThreadsController@add')->middleware('auth');
+//threads一覧画面表示//
+Route::get('threads/index','ThreadsController@index')->middleware('auth');
+//threadsのコメント表示//
+Route::get('threads/comment','Commentcontroller@add')->middleware('auth');
+//threadsの編集画面表示//
+Route::get('threads/edit','ThreadsController@edit')->middleware('auth');
+
+//メンテナンスindex//
+Route::get('/maintenance', 'MaintenanceController@add')->middleware('auth');
+Route::get('/maintenance/register','MaintenanceController@adduser')->middleware('auth');
+

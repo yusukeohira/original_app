@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+  //ログイン後インデックス画面にいく//
     public function add()
     {
-      return view('index');
+      return view('top');
     }
 }
